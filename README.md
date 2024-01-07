@@ -1,6 +1,21 @@
 # Crime-area-prediction-with-classification
-A model that uses 3 types of trees to predict a place a crime may have occurred based on the predictors given (The crime, Weapon type, and season)
+## Introduction
+This project aimed to predict where a crime most likely occured (specifically violent crimes) based on multiple factors. The locations in question are the zipcodes within charlotte.
+Factors Include
+- Crime NIBRS classification
+- Weapon used
+- Season in which the crime occured
 
-This was a project for a class that I completed all of the code for to produce the best calssification model I could with the predictors me and my group chose for this project. The entire file includes the data pulling, preprocssing, EDA, and then modeling and optimization of the models. My random forest perfomred the best with the main predictor usage to show which of our predictors were actually useful to the model. This was my first time with classifciation and learned alot through this project that I can apply to ensure a better result on my next project with classification. 
+Predicting areas where a crime could occur could help states and cities make themselves a safer place.   
 
-This was coded in hex so ignore the first few lines that have the hex. if you do downloiad the file just delte those blocks and it will work in jupyter, vscode, etc..
+## Data Source
+This data is found in the following website:
+- https://data.charlottenc.gov/datasets/charlotte::cmpd-incidents-1/about
+
+## Data Preparation 
+- Grouped all years together
+- Combined the different data sets crimes and weapons
+- Zipcodes had to be cleaned up and aggregated
+- Grouped together similar NIBRS classifications
+- Took out crimes where either no weapon was used or only hands/feet were used
+- Dealt with other NA fields
